@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.thorin.laptopku">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <permission
+        android:name="com.thorin.laptopku.READ_DATABASE"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="com.thorin.laptopku.WRITE_DATABASE"
+        android:protectionLevel="normal" />
+
+    <application
+        android:icon="@drawable/ic_splash"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Laptopku"
+        tools:ignore="AllowBackup">
+        <activity android:name=".view.SettingActivity"></activity>
+        <activity
+            android:name=".detail.DetailLaptopFav"
+            android:theme="@style/Theme.Laptopku.NoActionBar"></activity>
+        <activity android:name=".view.LaptopFavActivity" />
+        <activity
+            android:name=".view.AboutMeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".detail.DetailLaptop"
+            android:label="@string/title_activity_detail_laptop"
+            android:theme="@style/Theme.Laptopku.NoActionBar" />
+        <activity android:name=".view.LaptopActivity" /> <!-- Menerapkan Style SplashTheme Pada SplashActivity. -->
+        <activity
+            android:name=".view.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".provider.LaptopFavProvider"
+            android:authorities="com.thorin.laptopku"
+            android:enabled="true"
+            android:exported="true"
+            android:readPermission="com.thorin.laptopku.READ_DATABASE"
+            android:writePermission="com.thorin.laptopku.WRITE_DATABASE" />
+    </application>
+
+</manifest>

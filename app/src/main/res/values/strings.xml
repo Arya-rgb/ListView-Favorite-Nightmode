@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Laptop Kuy</string>
+    <string name="favorite">Favorite</string>
+    <string name="pengaturan">Pengaturan</string>
+    <string name="tentang_saya">Tentang Saya</string>
+    <string name="cari">Cari</string>
+    <string name="title_activity_detail_laptop">ScrollingActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="about_me">Deadline-focused Android Developer with board skill range including front-end, back-end, view binding, restful API, and project management.</string>
+    <string name="user_fav">Laptop Favorite</string>
+</resources>
